@@ -30,8 +30,8 @@
         <td><%= listing.bedroom_count %></td>
         <td><%= listing.bathroom_count %></td>
         <td><%= listing.description %></td>
-        <td><%= listing.night_fee_cents %></td>
-        <td><%= listing.cleaning_fee_cents %></td>
+        <td><%= listing.night_fee.format %></td>
+        <td><%= listing.cleaning_fee.format %></td>
         <td>
         <a href="<%= edit_listing_path(listing) %>" class='btn btn-danger'>Edit</a>
         </td>
@@ -42,6 +42,14 @@
 
 <br>
 
+<a href="<%= new_listing_path %>" class='btn btn-primary'>New Listing</a>
+<a href="<%= new_user_session_path %>" class='btn btn-primary'>Login</a>
+<a href="<%= destroy_user_session_path(method: :delete) %>" class='btn btn-primary'>Logout</a>
+
+<%
+=begin
 <%= link_to 'New Listing', new_listing_path %>
-<%= link_to('Login', new_user_session_path)  %>  
+<%= link_to('Login', new_user_session_path) %>
 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+%>
+=end 
