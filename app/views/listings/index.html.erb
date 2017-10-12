@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"> </p>
 
 <h1>Listings</h1>
 
@@ -43,3 +43,5 @@
 <br>
 
 <%= link_to 'New Listing', new_listing_path %>
+<%= link_to('Login', new_user_session_path)  %>  
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
